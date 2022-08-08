@@ -21,7 +21,7 @@ RUN trivy filesystem --exit-code 1 --no-progress
 FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "MilkyWare.Demo.dll"]
+ENTRYPOINT ["dotnet", "MilkyWare.Demo.Web.dll"]
 EXPOSE 80
 EXPOSE 443
 VOLUME /logs
