@@ -45,8 +45,8 @@ jobs:
           flavor: |
             latest=auto
           images: |
-            ${{env.DOCKERHUB_REGISTRY}}/${{secrets.DOCKER_USERNAME}}/${{env.IMAGE_NAME}}
-            ${{env.GITHUB_REGISTRY}}/${{secrets.DOCKER_USERNAME}}/${{env.IMAGE_NAME}}
+            ${{env.DOCKERHUB_REGISTRY}}/${{secrets.DOCKERHUB_USERNAME}}/${{env.IMAGE_NAME}}
+            ${{env.GITHUB_REGISTRY}}/${{secrets.DOCKERHUB_USERNAME}}/${{env.IMAGE_NAME}}
           tags: |
             type=ref,event=tag
             type=sha
